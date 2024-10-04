@@ -7,19 +7,20 @@ function App() {
   const getData = ()=>{
     fetch("https://randomuser.me/api/")
     .then((res) => res.json())
-    .then((data) => console.log(data));
+    .then((data) => setUser(data.results[0]));
   }
 
   useEffect(() => {
     getData()
   }, [])
   
+  const {name, email, picture} = user
 
   return (
     <div className="App">
-      <h1>Name</h1>
-      <img src="" alt="" />
-      <p>Mail</p>
+      <h1>{name?.first} {name?.last}</h1>
+      <img src={picture?.large} alt="img" />
+      <p>{email}</p>
       <button onClick={getData}>Click here</button>
     </div>
   );
