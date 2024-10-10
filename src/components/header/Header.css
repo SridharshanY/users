@@ -1,0 +1,10 @@
+.headerWrapper{
+    background-color: orange;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+}

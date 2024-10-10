@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import Header from "./components/header/Header";
+import Main from "./components/main/Main";
 
 function App() {
 
@@ -14,14 +16,10 @@ function App() {
     getData()
   }, [])
   
-  const {name, email, picture} = user
-
   return (
     <div className="App">
-      <h1>{name?.first} {name?.last}</h1>
-      <img src={picture?.large} alt="img" />
-      <p>{email}</p>
-      <button onClick={getData}>Click here</button>
+      <Header user={user}/>
+      <Main {...user}/>
     </div>
   );
 }
