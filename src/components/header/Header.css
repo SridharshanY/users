@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     gap: 2rem;
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
 }
