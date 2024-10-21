@@ -1,7 +1,7 @@
 import React from 'react'
 import './Main.css'
 
-const Main = ({name, picture, email, phone, location, registered}) => {
+const Main = ({name, picture, email, phone, location, registered,getData}) => {
   return (
     <div className='cardWrapper'>
       <div className="cardMain">
@@ -19,6 +19,7 @@ const Main = ({name, picture, email, phone, location, registered}) => {
           <p>{new Date(registered?.date).toLocaleDateString()}</p>
         </div>
       </div>
+      <button type="button" onClick={()=>getData()}>Click</button>
     </div>
   )
 }
